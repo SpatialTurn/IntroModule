@@ -19,7 +19,7 @@ A **Jupyter Notebook** is an interactive computing environment that allows you t
 - Tables and visualizations
 - Results and outputs
 
-—all in a single document.
+All in a single document.
 
 Jupyter Notebooks are especially useful for:
 
@@ -80,11 +80,10 @@ x + y
 - Used for formatted text, headings, lists, and links
 - Supports standard Markdown syntax
 
-Example:
-
 ### 4.3 Raw Cells
 
 -Used infrequently
+
 -Mostly for advanced formatting or export purposes
 
 **Note:** This is not too important for our case. 
@@ -119,7 +118,7 @@ For Python notebooks, the kernel:
 
 `Interrupt Kernel` – Stops long-running code
 
-Best practice:
+**Best practice:**
 Restart the kernel and run all cells before sharing a notebook.
 
 ## 7. Variables and Statefulness
@@ -198,9 +197,14 @@ This improves readability for both technical and non-technical audiences.
 ## 12. Best Practices for Newcomers
 
 -Keep notebooks focused on a single task
+
 -Use clear section headers
+
 -Restart and run all cells before finalizing
+
 -Save notebooks frequently
+
 -Use descriptive file names
+
 -Move reusable code into `.py` files as projects grow
 
