@@ -200,6 +200,5 @@ This improves readability for both technical and non-technical audiences.
 - Restart and run all cells before finalizing
 - Save notebooks frequently
 - Use descriptive file names
-
--Move reusable code into `.py` files as projects grow
+- Move reusable code into `.py` files as projects grow
 
