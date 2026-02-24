@@ -1,114 +1,206 @@
 ---
-title: "Using Markdown"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+title: "Jupyter Notebook"
+teaching: 30 # teaching time in minutes
+exercises: 15 # exercise time in minutes
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+# Introduction to Jupyter Notebooks
+*A Beginner’s Guide for New Data Scientists (Python)*
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+---
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+## 1. What Is a Jupyter Notebook?
 
-::::::::::::::::::::::::::::::::::::: objectives
+A **Jupyter Notebook** is an interactive computing environment that allows you to combine:
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Code (Python)
+- Text explanations
+- Mathematical equations
+- Tables and visualizations
+- Results and outputs
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+—all in a single document.
 
-## Introduction
+Jupyter Notebooks are especially useful for:
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+- Data exploration and analysis  
+- Teaching and learning Python  
+- Prototyping models  
+- Sharing reproducible research  
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+Instead of writing a script and running it all at once, you work in **small, executable blocks called cells**.
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+---
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+## 2. Why Data Scientists Use Jupyter Notebooks
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+Jupyter Notebooks support an **iterative workflow**:
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+1. Write a few lines of code  
+2. Run them immediately  
+3. Inspect the output  
+4. Modify and rerun as needed  
 
-::::::::::::::::::::::::::::::::::::: challenge 
+### Key Advantages
 
-## Challenge 1: Can you do it?
+- Immediate visualization of data  
+- Easy experimentation  
+- Built-in documentation using Markdown  
+- Reproducible analysis  
+- Simple sharing with collaborators  
 
-What is the output of this command?
+---
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+## 3. Getting Started: Opening a Notebook
+
+You can launch Jupyter Notebooks in several ways:
+
+- Through **Anaconda Navigator**
+- From the command line using:
+  ```bash
+  jupyter notebook
+```
+- Through **Google Collab**
+
+## 4. Understanding Cells
+A Jupyter Notebook is composed of cells. Each cell performs a specific role.
+
+### 4.1 Code Cells
+- Used to write and execute Python code
+- Output appears directly below the cell
+
+```python
+x = 10
+y = 5
+x + y
 ```
 
-:::::::::::::::::::::::: solution 
+### 4.2 Markdown Cells
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
+- Used for formatted text, headings, lists, and links
+- Supports standard Markdown syntax
+
+Example:
+
+### 4.3 Raw Cells
+
+-Used infrequently
+-Mostly for advanced formatting or export purposes
+
+**Note:** This is not too important for our case. 
+
+## 5. Running Cells
+
+You can execute cells using keyboard shortcuts:
+
+* `Shift + Enter` → Run cell and move to next
+
+* `Ctrl + Enter` → Run cell and stay in place
+
+* `Alt + Enter` → Run cell and insert a new one below
+
+**Important:** Cells do not need to be run from top to bottom, but execution order matters.
+
+## 6. The Notebook Kernel
+
+The kernel is the computational engine that runs your code.
+
+For Python notebooks, the kernel:
+
+* Executes Python code
+
+* Stores variables in memory
+
+* Can be restarted or interrupted
+
+### Common Kernel Actions
+
+`Restart Kernel` – Clears all variables
+
+`Interrupt Kernel` – Stops long-running code
+
+Best practice:
+Restart the kernel and run all cells before sharing a notebook.
+
+## 7. Variables and Statefulness
+
+Jupyter Notebooks are stateful, meaning variables persist across cells.
+
+```python
+a = 5
 ```
 
-:::::::::::::::::::::::::::::::::
+Later in another cell:
+```python
+a * 2
+```
+The variable `a` still exists as long as the kernel is running. 
 
+**Running cells out of order can lead to confusing results.**
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## 8. Working with Data in Jupyter
 
-:::::::::::::::::::::::: solution 
+Most data science workflows start by importing libraries and loading data.
 
-You can add a line with at least three colons and a `solution` tag.
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+### Loading Data
+```python
+df = pd.read_csv("data.csv")
+df.head()
+```
 
-## Figures
+## 9. Visualization Inside Notebooks
+Plots are displayed inline, directly below the code cell.
 
-You can use standard markdown for static figures with the following syntax:
+Example:
+```python
+plt.plot([1, 2, 3, 4], [10, 20, 25, 30])
+plt.xlabel("X values")
+plt.ylabel("Y values")
+plt.title("Simple Line Plot")
+plt.show()
+```
+This makes exploratory analysis fast and interactive.
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+## 10. Using Markdown for Documentation
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+Well-written notebooks tell a **story**.
 
-::::::::::::::::::::::::::::::::::::: callout
+Use Markdown cells to:
 
-Callout sections can highlight information.
+- Explain your approach
+- Describe datasets
+- Interpret results
+- Organize sections
 
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
+### Example Notebook Structure:
+1. Title: Exploratory Data Analysis
+2. Dataset Overview
+3. Data Cleaning
+4. Visualization
+5. Key Findings
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+This improves readability for both technical and non-technical audiences.
 
+## 11. Common Beginner Mistakes
 
-## Math
+- Running cells out of order
+- Forgetting to restart the kernel before sharing
+- Treating notebooks like long scripts
+- Skipping Markdown documentation
+- Overloading one notebook with multiple tasks
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+## 12. Best Practices for Newcomers
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+-Keep notebooks focused on a single task
+-Use clear section headers
+-Restart and run all cells before finalizing
+-Save notebooks frequently
+-Use descriptive file names
+-Move reusable code into `.py` files as projects grow
 
-Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-[r-markdown]: https://rmarkdown.rstudio.com/
