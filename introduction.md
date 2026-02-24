@@ -82,9 +82,8 @@ x + y
 
 ### 4.3 Raw Cells
 
--Used infrequently
-
--Mostly for advanced formatting or export purposes
+- Used infrequently
+- Mostly for advanced formatting or export purposes
 
 **Note:** This is not too important for our case. 
 
@@ -196,15 +195,11 @@ This improves readability for both technical and non-technical audiences.
 
 ## 12. Best Practices for Newcomers
 
--Keep notebooks focused on a single task
-
--Use clear section headers
-
--Restart and run all cells before finalizing
-
--Save notebooks frequently
-
--Use descriptive file names
+- Keep notebooks focused on a single task
+- Use clear section headers
+- Restart and run all cells before finalizing
+- Save notebooks frequently
+- Use descriptive file names
 
 -Move reusable code into `.py` files as projects grow
 
