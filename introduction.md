@@ -204,7 +204,7 @@ This improves readability for both technical and non-technical audiences.
 
 | Lesson            | Overview                                                                                                   |
 |-------------------|------------------------------------------------------------------------------------------------------------|
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Introduction I</a>  | Introduction to Python Coding in Jupyter Notebook |
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Introduction II</a>  | Introduction to Python Plotting in Jupyter Notebook |
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/.ipynb" target="_blank">Introduction III</a>  | Introduction to Advanced Batch-Geocoding |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Introduction I</a>  | Introduction to Variable Handling in Jupyter Notebook |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Introduction II</a>  | Introduction to Python Coding in Jupyter Notebook |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Introduction III</a>  | Introduction to Python Plotting in Jupyter Notebook |
 
