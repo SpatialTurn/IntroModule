@@ -275,7 +275,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Jupyter Notebook</h1>
-        <p>Last updated on 2026-02-24 |
+        <p>Last updated on 2026-03-04 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -286,6 +286,7 @@
         </div>
 
         
+
 <div class="section level1">
 <h1 id="introduction-to-jupyter-notebooks">Introduction to Jupyter Notebooks<a class="anchor" aria-label="anchor" href="#introduction-to-jupyter-notebooks"></a></h1>
 <p><em>A Beginner’s Guide for New Data Scientists (Python)</em></p>
@@ -325,17 +326,13 @@ environment that allows you to combine:</p>
 </div>
 <div class="section level2">
 <h2 id="getting-started-opening-a-notebook">3. Getting Started: Opening a Notebook<a class="anchor" aria-label="anchor" href="#getting-started-opening-a-notebook"></a></h2>
-<p>You can launch Jupyter Notebooks in several ways:</p>
-<ul><li><p>Through <strong>Anaconda Navigator</strong></p></li>
-<li>
-<p>From the command line using:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code></pre>
-</div>
-</li>
-<li><p>Through <strong>Google Collab</strong></p></li>
+<p>You can use Jupyter Notebooks in several ways:</p>
+<ul><li><p>Through <a href="https://www.anaconda.com/products/navigator" class="external-link">Anaconda
+Navigator</a>. Install the application, create an account, and launch
+<em>Jupyter Notebook</em>.</p></li>
+<li><p>Through <a href="https://colab.research.google.com" class="external-link">Google
+Collab</a>. You would need a google account for this. Then create a new
+notebook in Drive.</p></li>
 </ul></div>
 <div class="section level2">
 <h2 id="understanding-cells">4. Understanding Cells<a class="anchor" aria-label="anchor" href="#understanding-cells"></a></h2>
@@ -345,12 +342,12 @@ specific role.</p>
 <h3 id="code-cells">4.1 Code Cells<a class="anchor" aria-label="anchor" href="#code-cells"></a></h3>
 <ul><li>Used to write and execute Python code</li>
 <li>Output appears directly below the cell</li>
-</ul><div class="codewrapper sourceCode" id="cb2">
+</ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>x <span class="op">+</span> y</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -394,16 +391,16 @@ before sharing a notebook.</p>
 <h2 id="variables-and-statefulness">7. Variables and Statefulness<a class="anchor" aria-label="anchor" href="#variables-and-statefulness"></a></h2>
 <p>Jupyter Notebooks are stateful, meaning variables persist across
 cells.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span></code></pre>
+</div>
+<p>Later in another cell:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span></code></pre>
-</div>
-<p>Later in another cell:</p>
-<div class="codewrapper sourceCode" id="cb4">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>a <span class="op">*</span> <span class="dv">2</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>a <span class="op">*</span> <span class="dv">2</span></span></code></pre>
 </div>
 <p>The variable <code>a</code> still exists as long as the kernel is
 running.</p>
@@ -414,20 +411,20 @@ results.</strong></p>
 <h2 id="working-with-data-in-jupyter">8. Working with Data in Jupyter<a class="anchor" aria-label="anchor" href="#working-with-data-in-jupyter"></a></h2>
 <p>Most data science workflows start by importing libraries and loading
 data.</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="loading-data">Loading Data<a class="anchor" aria-label="anchor" href="#loading-data"></a></h3>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>df.head()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>df.head()</span></code></pre>
 </div>
 </div>
 </div>
@@ -435,14 +432,14 @@ data.</p>
 <h2 id="visualization-inside-notebooks">9. Visualization Inside Notebooks<a class="anchor" aria-label="anchor" href="#visualization-inside-notebooks"></a></h2>
 <p>Plots are displayed inline, directly below the code cell.</p>
 <p>Example:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>])</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>plt.xlabel(<span class="st">"X values"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>plt.ylabel(<span class="st">"Y values"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>plt.title(<span class="st">"Simple Line Plot"</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>])</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>plt.xlabel(<span class="st">"X values"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>plt.ylabel(<span class="st">"Y values"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>plt.title(<span class="st">"Simple Line Plot"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 <p>This makes exploratory analysis fast and interactive.</p>
 </div>
@@ -481,11 +478,26 @@ audiences.</p>
 <li>Save notebooks frequently</li>
 <li>Use descriptive file names</li>
 <li>Move reusable code into <code>.py</code> files as projects grow</li>
-</ul><!--
+</ul></div>
+</div>
+<div class="section level1">
+<h1 id="module-overview">Module Overview<a class="anchor" aria-label="anchor" href="#module-overview"></a></h1>
+<table class="table"><colgroup><col width="14%"><col width="85%"></colgroup><thead><tr><th>Lesson</th>
+<th>Overview</th>
+</tr></thead><tbody><tr><td><a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank" class="external-link">Introduction
+I</a></td>
+<td>Introduction to Python Coding in Jupyter Notebook</td>
+</tr><tr><td><a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank" class="external-link">Introduction
+II</a></td>
+<td>Introduction to Python Plotting in Jupyter Notebook</td>
+</tr><tr><td><a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/.ipynb" target="_blank" class="external-link">Introduction
+III</a></td>
+<td>Introduction to Advanced Batch-Geocoding</td>
+</tr></tbody></table><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></div>
-</div>
+
 
 
       </div> <!-- / div.lesson-content -->
@@ -547,9 +559,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/introduction.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/introduction.html",
-  "dateCreated": "2026-02-24",
-  "dateModified": "2026-02-24",
-  "datePublished": "2026-03-03"
+  "dateCreated": "2026-03-04",
+  "dateModified": "2026-03-04",
+  "datePublished": "2026-03-04"
 }
 
   </script><script>
