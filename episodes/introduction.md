@@ -53,14 +53,11 @@ Jupyter Notebooks support an **iterative workflow**:
 
 ## 3. Getting Started: Opening a Notebook
 
-You can launch Jupyter Notebooks in several ways:
+You can use Jupyter Notebooks in several ways:
 
-- Through **Anaconda Navigator**
-- From the command line using:
-  ```bash
-  jupyter notebook
-```
-- Through **Google Collab**
+- Through [Anaconda Navigator](https://www.anaconda.com/products/navigator). Install the application, create an account, and launch *Jupyter Notebook*.
+
+- Through [Google Collab](https://colab.research.google.com). You would need a google account for this. Then create a new notebook in Drive.  
 
 ## 4. Understanding Cells
 A Jupyter Notebook is composed of cells. Each cell performs a specific role.
@@ -201,4 +198,13 @@ This improves readability for both technical and non-technical audiences.
 - Save notebooks frequently
 - Use descriptive file names
 - Move reusable code into `.py` files as projects grow
+
+
+# Module Overview
+
+| Lesson            | Overview                                                                                                   |
+|-------------------|------------------------------------------------------------------------------------------------------------|
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Introduction I</a>  | Introduction to Python Coding in Jupyter Notebook |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Introduction II</a>  | Introduction to Python Plotting in Jupyter Notebook |
+| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/.ipynb" target="_blank">Introduction III</a>  | Introduction to Advanced Batch-Geocoding |
 
