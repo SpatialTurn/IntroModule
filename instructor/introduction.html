@@ -335,7 +335,19 @@ Navigator</a>. Install the application, create an account, and launch
 <li><p>Through <a href="https://colab.research.google.com" class="external-link">Google
 Collab</a>. You would need a google account for this. Then create a new
 notebook in Drive.</p></li>
-</ul></div>
+</ul><div class="section level3">
+<h3 id="quick-start-in-google-colab-easiest-for-beginners">Quick Start in Google Colab (easiest for beginners)<a class="anchor" aria-label="anchor" href="#quick-start-in-google-colab-easiest-for-beginners"></a></h3>
+<ol style="list-style-type: decimal"><li>Go to <a href="https://colab.research.google.com" class="external-link uri">https://colab.research.google.com</a>
+</li>
+<li>Click <strong>File → New notebook</strong>
+</li>
+<li>You’re ready! No installation needed.</li>
+</ol><p>Colab runs in the cloud → you only need a Google account and
+internet.</p>
+<p><strong>Tip:</strong> The interface looks almost identical to classic
+Jupyter.</p>
+</div>
+</div>
 <div class="section level2">
 <h2 id="understanding-cells">4. Understanding Cells<a class="anchor" aria-label="anchor" href="#understanding-cells"></a></h2>
 <p>A Jupyter Notebook is composed of cells. Each cell performs a
@@ -362,6 +374,21 @@ specific role.</p>
 <ul><li>Used infrequently</li>
 <li>Mostly for advanced formatting or export purposes</li>
 </ul><p><strong>Note:</strong> This is not too important for our case.</p>
+<div class="section level4">
+<h4 id="try-it-now-in-a-new-notebook">Try it now (in a new notebook):<a class="anchor" aria-label="anchor" href="#try-it-now-in-a-new-notebook"></a></h4>
+<p><strong>Code cell 1</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>message <span class="op">=</span> <span class="st">"Hello, welcome to Jupyter!"</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">print</span>(message)</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">print</span>(message <span class="op">+</span> <span class="st">" We're going to have fun!"</span>)</span></code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="section level2">
@@ -390,58 +417,101 @@ before sharing a notebook.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="variables-and-statefulness">7. Variables and Statefulness<a class="anchor" aria-label="anchor" href="#variables-and-statefulness"></a></h2>
-<p>Jupyter Notebooks are stateful, meaning variables persist across
-cells.</p>
-<div class="codewrapper sourceCode" id="cb2">
+<h2 id="variables-and-statefulness-the-most-important-concept">7. Variables and Statefulness – The Most Important Concept<a class="anchor" aria-label="anchor" href="#variables-and-statefulness-the-most-important-concept"></a></h2>
+<p>Jupyter remembers variables <strong>across cells</strong> as long as
+the kernel is running.</p>
+<p>This is very powerful… but also the source of most beginner
+frustration.</p>
+<div class="section level3">
+<h3 id="demo-run-these-cells-one-by-one">Demo – run these cells one by one<a class="anchor" aria-label="anchor" href="#demo-run-these-cells-one-by-one"></a></h3>
+<p><strong>Cell A</strong></p>
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>temperature <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Temperature is"</span>, temperature, <span class="st">"°C"</span>)</span></code></pre>
 </div>
-<p>Later in another cell:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<p><strong>Cell B</strong></p>
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>a <span class="op">*</span> <span class="dv">2</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>temperature <span class="op">=</span> temperature <span class="op">+</span> <span class="dv">5</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"New temperature:"</span>, temperature, <span class="st">"°C"</span>)</span></code></pre>
 </div>
-<p>The variable <code>a</code> still exists as long as the kernel is
-running.</p>
-<p><strong>Running cells out of order can lead to confusing
-results.</strong></p>
+<p><strong>Cell C</strong></p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"What is the temperature now?"</span>, temperature)</span></code></pre>
+</div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Challenge — Variable Values State</p>
+<ol style="list-style-type: decimal"><li>Create 3 new code cells</li>
+<li>In cell 1: <code>count = 0</code>
+</li>
+<li>In cell 2: <code>count = count + 1; print(count)</code>
+</li>
+<li>In cell 3: <code>print("Final count:", count)</code>
+</li>
+<li>Run all → should print 1</li>
+<li>Now run <strong>only cell 2</strong> five times</li>
+<li>Run cell 3 again → what happened?</li>
+</ol><p>→ You just experienced statefulness live!</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="working-with-data-in-jupyter">8. Working with Data in Jupyter<a class="anchor" aria-label="anchor" href="#working-with-data-in-jupyter"></a></h2>
 <p>Most data science workflows start by importing libraries and loading
 data.</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="loading-data">Loading Data<a class="anchor" aria-label="anchor" href="#loading-data"></a></h3>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>df.head()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data.csv"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>df.head()</span></code></pre>
 </div>
-</div>
+<table class="table"><colgroup><col width="45%"><col width="54%"></colgroup><thead><tr><th>Do this</th>
+<th>Why it helps newcomers</th>
+</tr></thead><tbody><tr><td>Restart &amp; Run All often</td>
+<td>Eliminates “ghost variable” bugs</td>
+</tr><tr><td>One import block at the top</td>
+<td>Avoids mysterious NameError</td>
+</tr><tr><td>Markdown headers + short comments</td>
+<td>Makes notebook readable like a story</td>
+</tr><tr><td>Small cells (5–15 lines max)</td>
+<td>Easier to find &amp; fix mistakes</td>
+</tr></tbody></table></div>
 </div>
 <div class="section level2">
 <h2 id="visualization-inside-notebooks">9. Visualization Inside Notebooks<a class="anchor" aria-label="anchor" href="#visualization-inside-notebooks"></a></h2>
 <p>Plots are displayed inline, directly below the code cell.</p>
 <p>Example:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>])</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>plt.xlabel(<span class="st">"X values"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>plt.ylabel(<span class="st">"Y values"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>plt.title(<span class="st">"Simple Line Plot"</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>])</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>plt.xlabel(<span class="st">"X values"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>plt.ylabel(<span class="st">"Y values"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>plt.title(<span class="st">"Simple Line Plot"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 <p>This makes exploratory analysis fast and interactive.</p>
 </div>
@@ -465,13 +535,26 @@ audiences.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="common-beginner-mistakes">11. Common Beginner Mistakes<a class="anchor" aria-label="anchor" href="#common-beginner-mistakes"></a></h2>
-<ul><li>Running cells out of order</li>
-<li>Forgetting to restart the kernel before sharing</li>
-<li>Treating notebooks like long scripts</li>
-<li>Skipping Markdown documentation</li>
-<li>Overloading one notebook with multiple tasks</li>
-</ul></div>
+<h2 id="common-beginner-mistakes-how-to-avoid-them">11. Common Beginner Mistakes &amp; How to Avoid Them<a class="anchor" aria-label="anchor" href="#common-beginner-mistakes-how-to-avoid-them"></a></h2>
+<ol style="list-style-type: decimal"><li><p><strong>Running cells out of order</strong><br>
+→ Variables get unexpected values<br><strong>Fix:</strong> Kernel → Restart &amp; Run All often</p></li>
+<li><p><strong>Forgetting to import libraries in a fresh
+kernel</strong><br>
+→ “NameError: name ‘pd’ is not defined”<br><strong>Fix:</strong> Put all <code>import</code> statements in the
+first code cell</p></li>
+<li><p><strong>One giant code cell with 200 lines</strong><br>
+→ Hard to debug, hard to fix mistakes<br><strong>Fix:</strong> Break logic into small cells (one logical step per
+cell)</p></li>
+<li><p><strong>No Markdown explanations</strong><br>
+→ Nobody (including future you) understands what you did<br><strong>Fix:</strong> Add a Markdown cell before/after important code
+blocks</p></li>
+<li><p><strong>Sharing notebook without restarting &amp; running
+all</strong><br>
+→ Collaborator sees missing variables or wrong results<br><strong>Fix:</strong> Always do Kernel → Restart &amp; Run All before
+sharing/exporting</p></li>
+<li><p><strong>Assuming outputs are permanent</strong><br>
+→ Outputs disappear on kernel restart<br><strong>Fix:</strong> Rely on code, not on saved output images</p></li>
+</ol></div>
 <div class="section level2">
 <h2 id="best-practices-for-newcomers">12. Best Practices for Newcomers<a class="anchor" aria-label="anchor" href="#best-practices-for-newcomers"></a></h2>
 <ul><li>Keep notebooks focused on a single task</li>
