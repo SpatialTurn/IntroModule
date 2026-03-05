@@ -837,79 +837,27 @@ the changes.</p>
 </section><section><h2 class="section-heading" id="step-3-enable-github-pages---create-another-repository">Step 3: Enable GitHub Pages - Create another repository<a class="anchor" aria-label="anchor" href="#step-3-enable-github-pages---create-another-repository"></a>
 </h2>
 <hr class="half-width">
-<p>GitHub Pages builds and hosts your site automatically from the
-<code>gh-pages</code> branch.</p>
 <ol style="list-style-type: decimal">
-<li><p>In your new repository, go to <strong>Settings</strong> (top
-tab)</p></li>
-<li><p>Scroll down to <strong>Pages</strong> (in the left sidebar, under
-“Code and automation”)</p></li>
-<li>
-<p>Under <strong>Source</strong>:</p>
-<ul>
-<li>Branch: select <code>gh-pages</code>
-</li>
-<li>Folder: select <code>/ (root)</code>
-</li>
-<li>Click <strong>Save</strong>
-</li>
-</ul>
-</li>
-<li><p>Wait 1–2 minutes, then refresh.<br>
-GitHub will show:<br>
-“Your site is live at <a href="https://" class="external-link uri">https://</a><strong>your-username</strong>.github.io/<strong>your-repo-name</strong>/”</p></li>
-</ol>
-<p>Copy this URL — that’s your website!</p>
-<ol start="5" style="list-style-type: decimal">
-<li>In our case, we have a repository/webpage name called
-<code>spatialturn.github.io</code>. See <a href="https://github.com/SpatialTurn" class="external-link">here</a>.</li>
-</ol>
-<hr></section><section><h2 class="section-heading" id="step-4-edit-the-main-configuration-file">Step 4: Edit the Main Configuration File<a class="anchor" aria-label="anchor" href="#step-4-edit-the-main-configuration-file"></a>
-</h2>
-<hr class="half-width">
-<p>This single file controls almost everything.</p>
-<ol style="list-style-type: decimal">
-<li><p>In your repository, open the file called
+<li><p>In this second newly created GitHub repository, you will display
+whatever content you add to the repo you created in Step 1.</p></li>
+<li><p>For License choose <code>GNU General Public License</code> if you
+wish.</p></li>
+<li><p>Visibility can be changed at anytime but you can choose either to
+keep it <code>Public</code> or <code>Private</code>.</p></li>
+<li><p>In this repository, create and open the file called
 <code>_config.yml</code></p></li>
-<li><p>Edit these key fields (use the pencil icon → commit
-changes):</p></li>
+<li><p>Add [Title], [Description] for the <code>_config.yml</code> if
+you want to.</p></li>
+<li><p>Create a file called <code>index.html</code> or whatever name you
+prefer. This will be the place where you make changes to your webpage.
+You will need to learn html coding here! Check this <a href="https://www.w3schools.com/html/html_intro.asp" class="external-link">out</a>.</p></li>
+<li><p>In our case, we have a repository/webpage name called
+<code>spatialturn.github.io</code>. See <a href="https://github.com/SpatialTurn" class="external-link">here</a>. See the changes we made
+there!</p></li>
+<li><p>** Alternatively, you can also use the template we created <a href="https://github.com/SpatialTurn/carpentrytemp.github.io" class="external-link">here</a>
+and create your very own html repo.**</p></li>
 </ol>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># --- general ---</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Python for Novices"</span><span class="co">                     # Workshop title</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">life_cycle</span><span class="kw">:</span><span class="at"> </span><span class="st">"upcoming"</span><span class="co">                          # or past/current</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">carpentry</span><span class="kw">:</span><span class="at"> </span><span class="st">"dc"</span><span class="co">                                 # dc = Data Carpentry, swc = Software, lc = Library</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">country</span><span class="kw">:</span><span class="at"> </span><span class="st">"us"</span><span class="co">                                   # two-letter code</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">country-full</span><span class="kw">:</span><span class="at"> </span><span class="st">"United States"</span></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">city</span><span class="kw">:</span><span class="at"> </span><span class="st">"West Lafayette"</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="fu">venue</span><span class="kw">:</span><span class="at"> </span><span class="st">"Purdue University, Wilmeth Active Learning Center"</span></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu">address</span><span class="kw">:</span><span class="at"> </span><span class="st">"155 S Grant St, West Lafayette, IN 47907"</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="fu">contact</span><span class="kw">:</span><span class="at"> </span><span class="st">"instructor@purdue.edu"</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="fu">handout</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span><span class="co">                                     # optional link to Etherpad/Google Doc</span></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="fu">eventbrite</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span><span class="co">                                  # optional registration link</span></span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="co"># --- dates ---</span></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="fu">start_date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2026-05-15"</span></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="fu">end_date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2026-05-16"</span></span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="co"># --- instructors/helpers ---</span></span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a><span class="fu">instructor</span><span class="kw">:</span></span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Jane Doe</span></span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a><span class="fu">helper</span><span class="kw">:</span></span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Helper Name One</span></span>
-<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Helper Name Two</span></span>
-<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a><span class="co"># --- links ---</span></span>
-<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span><span class="at"> </span><span class="st">""</span><span class="co">                                     # leave blank — GitHub fills it</span></span></code></pre>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>Create a file called <code>index.html</code> or whatever name you
-prefer. This will be the place where you make changes to your
-webpage.</li>
-</ol>
-<hr></section><section><h2 class="section-heading" id="step-5-adding-content-to-webpage-">Step 5: Adding Content to Webpage.<a class="anchor" aria-label="anchor" href="#step-5-adding-content-to-webpage-"></a>
+<hr></section><section><h2 class="section-heading" id="step-4-adding-content-to-webpage-">Step 4: Adding Content to Webpage.<a class="anchor" aria-label="anchor" href="#step-4-adding-content-to-webpage-"></a>
 </h2>
 <hr class="half-width">
 <ol style="list-style-type: decimal">
