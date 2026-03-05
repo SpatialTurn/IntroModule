@@ -1,10 +1,10 @@
 ---
-title: "How to Create Your Own Carpentries-Style Workshop Website Using GitHub"
+title: "Carpentry Introduction"
 teaching: 40
 exercises: 20
 ---
 
-# How to Create Your Own Carpentries-Style Workshop Website Using GitHub
+## How to Create Your Own Carpentries-Style Workshop Website Using GitHub
 
 **A beginner-friendly guide for instructors, lesson authors, and community members**
 
@@ -105,7 +105,7 @@ Copy this URL — that's your website!
 
 ---
 
-## Step 4: Edit the Main Configuration File (`_config.yml`)
+## Step 4: Edit the Main Configuration File
 
 This single file controls almost everything.
 
@@ -140,13 +140,13 @@ helper:
 
 # --- links ---
 website: ""                                     # leave blank — GitHub fills it
-
+```
 
 3. Create a file called `index.html` or whatever name you prefer. This will be the place where you make changes to your webpage.
 
 ---
 
-## Final Step  - Adding Content to Webpage. 
+## Step 5: Adding Content to Webpage. 
 
 
 1. Open the folder called episodes in repository created using the carpentry template in Step 1. 
