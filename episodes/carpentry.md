@@ -82,71 +82,28 @@ That's it! Now you can make changes locally to your webpage without having to op
 
 **Tip:** If you happen to make changes to the webpage repository from a browser and to make sure you have saved the progress locally in your desktop, all you have to do is `Fetch Origin` in the top right of the application to update your local folder repo of the changes. 
 
+
 ## Step 3: Enable GitHub Pages  - Create another repository 
 
-GitHub Pages builds and hosts your site automatically from the `gh-pages` branch.
+1. In this second newly created GitHub repository, you will display whatever content you add to the repo you created in Step 1. 
 
-1. In your new repository, go to **Settings** (top tab)
+2. For License choose `GNU General Public License` if you wish. 
 
-2. Scroll down to **Pages** (in the left sidebar, under "Code and automation")
+3. Visibility can be changed at anytime but you can choose either to keep it `Public` or `Private`. 
 
-3. Under **Source**:
-   - Branch: select `gh-pages`
-   - Folder: select `/ (root)`
-   - Click **Save**
+4. In this repository, create and open the file called `_config.yml`
 
-4. Wait 1–2 minutes, then refresh.  
-   GitHub will show:  
-   "Your site is live at https://**your-username**.github.io/**your-repo-name**/"
+5. Add [Title], [Description] for the `_config.yml` if you want to. 
 
-Copy this URL — that's your website!
+6. Create a file called `index.html` or whatever name you prefer. This will be the place where you make changes to your webpage. You will need to learn html coding here! Check this [out](https://www.w3schools.com/html/html_intro.asp). 
 
-5. In our case, we have a repository/webpage name called `spatialturn.github.io`. See [here](https://github.com/SpatialTurn).
+7. In our case, we have a repository/webpage name called `spatialturn.github.io`. See [here](https://github.com/SpatialTurn). See the changes we made there!
+
+8. ** Alternatively, you can also use the template we created [here](https://github.com/SpatialTurn/carpentrytemp.github.io) and create your very own html repo.**
 
 ---
 
-## Step 4: Edit the Main Configuration File
-
-This single file controls almost everything.
-
-1. In your repository, open the file called `_config.yml`
-
-2. Edit these key fields (use the pencil icon → commit changes):
-
-```yaml
-# --- general ---
-title: "Python for Novices"                     # Workshop title
-life_cycle: "upcoming"                          # or past/current
-carpentry: "dc"                                 # dc = Data Carpentry, swc = Software, lc = Library
-country: "us"                                   # two-letter code
-country-full: "United States"
-city: "West Lafayette"
-venue: "Purdue University, Wilmeth Active Learning Center"
-address: "155 S Grant St, West Lafayette, IN 47907"
-contact: "instructor@purdue.edu"
-handout: ""                                     # optional link to Etherpad/Google Doc
-eventbrite: ""                                  # optional registration link
-
-# --- dates ---
-start_date: "2026-05-15"
-end_date: "2026-05-16"
-
-# --- instructors/helpers ---
-instructor:
-  - Jane Doe
-helper:
-  - Helper Name One
-  - Helper Name Two
-
-# --- links ---
-website: ""                                     # leave blank — GitHub fills it
-```
-
-3. Create a file called `index.html` or whatever name you prefer. This will be the place where you make changes to your webpage.
-
----
-
-## Step 5: Adding Content to Webpage. 
+## Step 4: Adding Content to Webpage. 
 
 
 1. Open the folder called episodes in repository created using the carpentry template in Step 1. 
