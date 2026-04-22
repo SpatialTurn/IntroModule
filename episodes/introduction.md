@@ -274,6 +274,15 @@ This improves readability for both technical and non-technical audiences.
 - Move reusable code into `.py` files as projects grow
 
 
+# Exercise 1: Variable Handling. 
+
+This exercise teaches you how to data is stored and updated for a given variable in python Jupyter notebook. 
+
+Proceed to the activity:<a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Introduction I</a>
+
+
+
+
 # Module Overview
 
 | Lesson            | Overview                                                                                                   |
