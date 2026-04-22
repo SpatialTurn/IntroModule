@@ -4,11 +4,6 @@ teaching: 30 # teaching time in minutes
 exercises: 15 # exercise time in minutes
 ---
 
-# Introduction to Jupyter Notebooks
-*A Beginner’s Guide for New Data Scientists (Python)*
-
----
-
 ## 1. What Is a Jupyter Notebook?
 
 A **Jupyter Notebook** is an interactive computing environment that allows you to combine:
@@ -274,7 +269,7 @@ This improves readability for both technical and non-technical audiences.
 - Move reusable code into `.py` files as projects grow
 
 
-# Exercise 1: Variable Handling. 
+## Exercise 1: Variable Handling. 
 
 This exercise teaches you how to data is stored and updated for a given variable in python Jupyter notebook. 
 
@@ -283,7 +278,7 @@ Proceed to the activity:<a href="https://colab.research.google.com/github/Spatia
 
 
 
-# Module Overview
+## Module Overview
 
 | Lesson            | Overview                                                                                                   |
 |-------------------|------------------------------------------------------------------------------------------------------------|
