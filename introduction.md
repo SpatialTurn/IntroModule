@@ -269,20 +269,21 @@ This improves readability for both technical and non-technical audiences.
 - Move reusable code into `.py` files as projects grow
 
 
-## Exercise 1: Variable Handling. 
+## Exercise 1: Variable Handling
 
 This exercise teaches you how to data is stored and updated for a given variable in python Jupyter notebook. 
 
-Proceed to the activity:<a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Introduction I</a>
+Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Here</a>
 
+## Exercise 2: Python Coding
 
+This exercise teaches you how to do basic coding in python Jupyter notebook. 
 
+Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Here</a>
 
-## Module Overview
+## Exercise 3: Python Plotting
 
-| Lesson            | Overview                                                                                                   |
-|-------------------|------------------------------------------------------------------------------------------------------------|
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Introduction I</a>  | Introduction to Variable Handling in Jupyter Notebook |
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Introduction II</a>  | Introduction to Python Coding in Jupyter Notebook |
-| <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Introduction III</a>  | Introduction to Python Plotting in Jupyter Notebook |
+This exercise teaches you how to perform plotting in python Jupyter notebook. 
+
+Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Here</a>
 
