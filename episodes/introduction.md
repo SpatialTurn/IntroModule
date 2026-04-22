@@ -134,6 +134,14 @@ For Python notebooks, the kernel:
 **Best practice:**
 Restart the kernel and run all cells before sharing a notebook.
 
+
+## Exercise 1: Python Coding
+
+This exercise teaches you how to do basic coding in python Jupyter notebook. 
+
+Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Here</a>
+
+
 ## 7. Variables and Statefulness – The Most Important Concept
 
 Jupyter remembers variables **across cells** as long as the kernel is running.
@@ -175,6 +183,12 @@ Challenge — Variable Values State
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Exercise 2: Variable Handling
+
+This exercise teaches you how to data is stored and updated for a given variable in python Jupyter notebook. 
+
+Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Here</a>
+
 ## 8. Working with Data in Jupyter
 
 Most data science workflows start by importing libraries and loading data.
@@ -212,6 +226,11 @@ plt.show()
 ```
 This makes exploratory analysis fast and interactive.
 
+## Exercise 3: Python Plotting
+
+This exercise teaches you how to perform plotting in python Jupyter notebook. 
+
+Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Here</a>
 
 ## 10. Using Markdown for Documentation
 
@@ -269,21 +288,5 @@ This improves readability for both technical and non-technical audiences.
 - Move reusable code into `.py` files as projects grow
 
 
-## Exercise 1: Variable Handling
 
-This exercise teaches you how to data is stored and updated for a given variable in python Jupyter notebook. 
-
-Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Variables_Intro.ipynb" target="_blank">Here</a>
-
-## Exercise 2: Python Coding
-
-This exercise teaches you how to do basic coding in python Jupyter notebook. 
-
-Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Introduction_Python.ipynb" target="_blank">Here</a>
-
-## Exercise 3: Python Plotting
-
-This exercise teaches you how to perform plotting in python Jupyter notebook. 
-
-Proceed to the activity: <a href="https://colab.research.google.com/github/SpatialTurn/DataCollection-Notebooks/blob/main/Census/Intro_Ploting.ipynb" target="_blank">Here</a>
 
